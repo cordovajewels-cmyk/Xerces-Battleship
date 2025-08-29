@@ -1,0 +1,156 @@
+.header{
+    display: flex;
+    background-color: #1e2632;
+    height: 90px;
+    padding: 10px;
+    justify-content: space-between;
+}
+.header2{
+    display: flex;
+    background-color: #1e2632;
+    height: 240px;
+    padding: 30px;
+    margin-top: 0px;
+    justify-content: space-between;    
+}
+
+.nav{
+    display: flex;
+    gap: 30px;
+    margin-right: 30px;
+}
+.nav a{
+    text-decoration: none;
+    color: white;
+    font-family: Orbitron;
+}
+.btn {
+    background-color: #3882F6;   /* blue background */
+    color: white;               /* white text */
+    padding: 6px 15px;         /* space inside the button */
+    border: none;               /* remove border */
+    border-radius: 6px;         /* rounded corners */
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;  
+    text-decoration: none;          /* pointer on hover */
+    font-family: Roboto;
+}
+.btn:hover {
+    background-color: darkblue;  /* slightly darker blue on hover */
+}
+.join-Xerces{
+    font-family: Roboto;
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+}
+.umbra-text{
+    font-family: Roboto;
+    color: white;
+    font-size: 18px;
+    margin-right: 70px;
+    margin-bottom: 30px;
+}
+.section-title{
+    font-family: Roboto;
+    color: black;
+    font-weight: 900;
+    text-align: center;
+}
+.midsection{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;     
+    height: 200px;
+    margin-right: 50px; 
+    margin-left: 50px;  
+}
+.card-images {
+  width: 140px;     /* container size */
+}
+.card-images img {
+  width: 100%;      /* fill container */
+  height: auto;     /* keep proportions */
+  display: block;
+  border-radius: 12px;
+  border: 3px solid #1e90ff;
+}
+.quotation{
+    background-color: #E5E7EB;     
+    height: 70px;   
+    padding: 80px
+}
+.quotation p{
+    font-family: Roboto;
+    font-weight: 300;
+    font-style: italic;
+    color: #1F2937;
+    text-align: center;
+}
+.quotation .attribution{
+    font-weight: 600;
+    color: black;
+    text-align: right;
+}
+/* wrapper just to give breathing room; optional */
+.footer{
+  padding: 20px;
+  margin: 40px;
+}
+
+/* the blue pill */
+.footer .cta{
+  background: #3882F6;
+  border-radius: 10px;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;              /* vertically center content */
+  justify-content: space-between;   /* text left, button right */
+  gap: 16px;                        /* space between columns */
+  color: #fff;
+}
+
+/* left text block */
+.footer .copy h3{
+  margin: 0 0 4px;
+  font-family: Roboto;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+}
+.footer .copy p{
+  font-family: Roboto;
+  margin: 0;
+  opacity: .9;                      /* lighter subtext look */
+}
+
+/* right button */
+.footer .btn{
+  border: 2px solid #fff;
+  color: #fff;
+  background: transparent;
+  padding: 6px 30px;
+  border-radius: 6px;
+  font-weight: 700;
+  text-decoration: none;
+  flex-shrink: 0;                   /* don’t let it squish */
+}
+.footer .btn:hover{
+    background-color:blue;  /* slightly darker blue on hover */
+}
+
+/* optional: keep long text from crashing the button */
+@media (max-width: 600px){
+  .footer .cta{ flex-direction: column; align-items: flex-start; }
+  .footer .btn{ margin-top: 12px; }
+}
+.bottom-footer{
+   background-color: #1e2632;
+   text-align: center;
+   font-size: 12px;
+   font-family: Roboto;
+   color: white;
+   height: 40px;
+   padding: 10px;
+}
