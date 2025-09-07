@@ -1,3 +1,9 @@
+/* ALWAYS INCLUDE AT BEGINNING OF CSS FILES, REMOVES ANY OUT OF THE BOX MARGINS OR PADDINGS AND SETS ALL ELEMENTS TO box-sizing of border-box */
+*,
+*::before,
+*::after {
+    box-sizing: border-box; /* SETS THE WIDTH AND HEIGHT OF DIV TO 250/240 i.e. INCLUDES PADDING AND BORDER VALUES  */
+}
 .header{
     display: flex;
     background-color: #1e2632;
@@ -5,13 +11,17 @@
     padding: 10px;
     justify-content: space-between;
 }
+/* HERO / first section */
 .header2{
-    display: flex;
-    background-color: #1e2632;
-    height: 240px;
-    padding: 30px;
-    margin-top: 0px;
-    justify-content: space-between;    
+  display: flex;
+  background-color: #1e2632;
+  /* was: height: 240px;  -> fixed height causes overflow */
+  min-height: 240px;        /* allow it to grow as needed */
+  padding: 30px;
+  margin-top: 0;
+  justify-content: space-between;
+  align-items: center;      /* vertical alignment */
+  gap: 24px;
 }
 
 .nav{
@@ -62,7 +72,7 @@
     display: flex;
     justify-content: space-evenly;
     background-color: white;     
-    height: 200px;
+    min-height: 200px;
     margin-right: 50px; 
     margin-left: 50px;  
 }
@@ -78,7 +88,7 @@
 }
 .quotation{
     background-color: #E5E7EB;     
-    height: 70px;   
+    min-height: 70px;   
     padding: 80px
 }
 .quotation p{
@@ -153,4 +163,30 @@
    color: white;
    height: 40px;
    padding: 10px;
+}
+
+
+/* Left column (the first child that holds the heading, copy, and CTA) */
+.header2 > :first-child{
+  display: flex;
+  flex-direction: column;   /* stack text + button */
+  gap: 12px;
+  max-width: 56ch;          /* keep lines from running too wide */
+}
+
+/* Keep the Enlist button anchored inside the left column */
+.header2 > :first-child .btn{
+  align-self: flex-start;   /* no accidental stretching */
+}
+
+/* Make the hero image responsive so it doesn’t push text out */
+.header2 img{
+  max-width: 45vw;          /* or a fixed px width if you prefer */
+  height: auto;
+  display: block;
+}
+
+/* Safety: avoid weird long-word overflows */
+.header2, .header2 *{
+  overflow-wrap: anywhere;
 }
